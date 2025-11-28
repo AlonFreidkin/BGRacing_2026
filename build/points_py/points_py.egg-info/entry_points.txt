@@ -1,0 +1,3 @@
+[console_scripts]
+publisher_s = points_py.publisher_s:main
+subscriber_s = points_py.subscriber_s:main

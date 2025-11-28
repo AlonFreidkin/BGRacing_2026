@@ -1,0 +1,25 @@
+[1.989s] Invoking command in '/home/edward-grieg/repos/BGRacing_2026/src/points_py': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/edward-grieg/repos/BGRacing_2026/build/points_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edward-grieg/repos/BGRacing_2026/install/points_py/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/points_py build --build-base /home/edward-grieg/repos/BGRacing_2026/build/points_py/build install --record /home/edward-grieg/repos/BGRacing_2026/build/points_py/install.log --single-version-externally-managed install_data
+[2.398s] running egg_info
+[2.428s] writing ../../build/points_py/points_py.egg-info/PKG-INFO
+[2.431s] writing dependency_links to ../../build/points_py/points_py.egg-info/dependency_links.txt
+[2.431s] writing entry points to ../../build/points_py/points_py.egg-info/entry_points.txt
+[2.431s] writing requirements to ../../build/points_py/points_py.egg-info/requires.txt
+[2.431s] writing top-level names to ../../build/points_py/points_py.egg-info/top_level.txt
+[2.491s] reading manifest file '../../build/points_py/points_py.egg-info/SOURCES.txt'
+[2.495s] writing manifest file '../../build/points_py/points_py.egg-info/SOURCES.txt'
+[2.496s] running build
+[2.496s] running build_py
+[2.497s] copying points_py/subscriber_s.py -> /home/edward-grieg/repos/BGRacing_2026/build/points_py/build/lib/points_py
+[2.497s] running install
+[2.505s] running install_lib
+[2.539s] copying /home/edward-grieg/repos/BGRacing_2026/build/points_py/build/lib/points_py/subscriber_s.py -> /home/edward-grieg/repos/BGRacing_2026/install/points_py/lib/python3.12/site-packages/points_py
+[2.541s] byte-compiling /home/edward-grieg/repos/BGRacing_2026/install/points_py/lib/python3.12/site-packages/points_py/subscriber_s.py to subscriber_s.cpython-312.pyc
+[2.542s] running install_data
+[2.542s] running install_egg_info
+[2.573s] removing '/home/edward-grieg/repos/BGRacing_2026/install/points_py/lib/python3.12/site-packages/points_py-0.0.0-py3.12.egg-info' (and everything under it)
+[2.576s] Copying ../../build/points_py/points_py.egg-info to /home/edward-grieg/repos/BGRacing_2026/install/points_py/lib/python3.12/site-packages/points_py-0.0.0-py3.12.egg-info
+[2.579s] running install_scripts
+[2.770s] Installing publisher_s script to /home/edward-grieg/repos/BGRacing_2026/install/points_py/lib/points_py
+[2.770s] Installing subscriber_s script to /home/edward-grieg/repos/BGRacing_2026/install/points_py/lib/points_py
+[2.771s] writing list of installed files to '/home/edward-grieg/repos/BGRacing_2026/build/points_py/install.log'
+[2.816s] Invoked command in '/home/edward-grieg/repos/BGRacing_2026/src/points_py' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/edward-grieg/repos/BGRacing_2026/build/points_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edward-grieg/repos/BGRacing_2026/install/points_py/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/points_py build --build-base /home/edward-grieg/repos/BGRacing_2026/build/points_py/build install --record /home/edward-grieg/repos/BGRacing_2026/build/points_py/install.log --single-version-externally-managed install_data
