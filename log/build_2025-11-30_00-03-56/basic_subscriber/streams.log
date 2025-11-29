@@ -1,0 +1,32 @@
+[2.145s] Invoking command in '/home/edward-grieg/repos/BGRacing_2026/src/basic_subscriber/src/basic_subscriber': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/basic_subscriber build --build-base /home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/build install --record /home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/install.log --single-version-externally-managed install_data
+[2.570s] running egg_info
+[2.570s] creating ../../../../build/basic_subscriber/basic_subscriber.egg-info
+[2.598s] writing ../../../../build/basic_subscriber/basic_subscriber.egg-info/PKG-INFO
+[2.598s] writing dependency_links to ../../../../build/basic_subscriber/basic_subscriber.egg-info/dependency_links.txt
+[2.598s] writing requirements to ../../../../build/basic_subscriber/basic_subscriber.egg-info/requires.txt
+[2.598s] writing top-level names to ../../../../build/basic_subscriber/basic_subscriber.egg-info/top_level.txt
+[2.598s] writing manifest file '../../../../build/basic_subscriber/basic_subscriber.egg-info/SOURCES.txt'
+[2.661s] reading manifest file '../../../../build/basic_subscriber/basic_subscriber.egg-info/SOURCES.txt'
+[2.665s] writing manifest file '../../../../build/basic_subscriber/basic_subscriber.egg-info/SOURCES.txt'
+[2.665s] running build
+[2.665s] running build_py
+[2.665s] creating /home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/build
+[2.665s] creating /home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/build/lib
+[2.666s] creating /home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/build/lib/basic_subscriber
+[2.666s] copying basic_subscriber/__init__.py -> /home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/build/lib/basic_subscriber
+[2.666s] running install
+[2.670s] running install_lib
+[2.706s] creating /home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/lib/python3.12/site-packages/basic_subscriber
+[2.706s] copying /home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/build/lib/basic_subscriber/__init__.py -> /home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/lib/python3.12/site-packages/basic_subscriber
+[2.706s] byte-compiling /home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/lib/python3.12/site-packages/basic_subscriber/__init__.py to __init__.cpython-312.pyc
+[2.706s] running install_data
+[2.706s] creating /home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/share/ament_index
+[2.706s] creating /home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/share/ament_index/resource_index
+[2.706s] creating /home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/share/ament_index/resource_index/packages
+[2.706s] copying resource/basic_subscriber -> /home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/share/ament_index/resource_index/packages
+[2.706s] copying package.xml -> /home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/share/basic_subscriber
+[2.706s] running install_egg_info
+[2.734s] Copying ../../../../build/basic_subscriber/basic_subscriber.egg-info to /home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/lib/python3.12/site-packages/basic_subscriber-0.0.0-py3.12.egg-info
+[2.735s] running install_scripts
+[2.949s] writing list of installed files to '/home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/install.log'
+[3.057s] Invoked command in '/home/edward-grieg/repos/BGRacing_2026/src/basic_subscriber/src/basic_subscriber' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/edward-grieg/repos/BGRacing_2026/install/basic_subscriber/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/basic_subscriber build --build-base /home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/build install --record /home/edward-grieg/repos/BGRacing_2026/build/basic_subscriber/install.log --single-version-externally-managed install_data

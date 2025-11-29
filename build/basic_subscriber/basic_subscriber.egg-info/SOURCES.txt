@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+../../../../build/basic_subscriber/basic_subscriber.egg-info/PKG-INFO
+../../../../build/basic_subscriber/basic_subscriber.egg-info/SOURCES.txt
+../../../../build/basic_subscriber/basic_subscriber.egg-info/dependency_links.txt
+../../../../build/basic_subscriber/basic_subscriber.egg-info/requires.txt
+../../../../build/basic_subscriber/basic_subscriber.egg-info/top_level.txt
+../../../../build/basic_subscriber/basic_subscriber.egg-info/zip-safe
+basic_subscriber/__init__.py
+resource/basic_subscriber
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

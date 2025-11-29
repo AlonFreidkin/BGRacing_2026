@@ -9,8 +9,6 @@ setup.py
 ../../build/points_py/points_py.egg-info/top_level.txt
 ../../build/points_py/points_py.egg-info/zip-safe
 points_py/__init__.py
-points_py/publisher_s.py
-points_py/subscriber_s.py
 resource/points_py
 test/test_copyright.py
 test/test_flake8.py

@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+../../../../build/basic_publisher/basic_publisher.egg-info/PKG-INFO
+../../../../build/basic_publisher/basic_publisher.egg-info/SOURCES.txt
+../../../../build/basic_publisher/basic_publisher.egg-info/dependency_links.txt
+../../../../build/basic_publisher/basic_publisher.egg-info/requires.txt
+../../../../build/basic_publisher/basic_publisher.egg-info/top_level.txt
+../../../../build/basic_publisher/basic_publisher.egg-info/zip-safe
+basic_publisher/__init__.py
+resource/basic_publisher
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
