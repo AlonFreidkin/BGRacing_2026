@@ -18,11 +18,11 @@ class BasicSubscriber(Node):
         self.y.append(arr[1])
         self.get_logger().info("%s %s" % (arr[0],arr[1]))
         if self.counter == 155:
-            cubic_spliner = interp1d(self.x,self.y,kind='cubic')
             result_x = np.array(self.x)
-            result_y = np.array(cubic_spliner(self.x))
+            result_y = np.array(self.y)
             np.concatenate((result_x,[self.x[0]]))
             np.concatenate((result_y,[self.y[0]]))
+            cubic_spliner = interp1d(result_x,result_y,kind='cubic')
             plt.figure(figsize=(10,6))
             plt.plot(result_x,result_y)
             plt.xlabel("X")
