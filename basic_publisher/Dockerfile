@@ -36,9 +36,7 @@ RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
 
 # Install pip for Python 3.12
 RUN pip install --break-system-packages --no-cache-dir pandas numpy scipy matplotlib
-WORKDIR /ros2_ws
-COPY src ./src
-COPY output ./output
-RUN bash -c "source /opt/ros/$ROS_DISTRO/setup.bash && colcon build"
+COPY . .
+RUN . /opt/ros/$ROS_DISTRO/setup.sh && colcon build
 
-CMD ["bash", "-c", "source /opt/ros/$ROS_DISTRO/setup.bash && source /ros2_ws/install/setup.bash && ros2 run basic_subscriber subscriber_s"]
+CMD ["bash", "-c", "source /opt/ros/$ROS_DISTRO/setup.bash && source install/setup.bash && ros2 run basic_publisher publisher_s"]
