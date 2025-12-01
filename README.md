@@ -44,7 +44,7 @@ Ubuntu 24.04
 
 1. clone the repository with git.
 
-2. open the repository in a terminal
+2. open the repository in a terminal and execute `mkdir ros2_plots`
 
 3. open the directory of the subscriber - `cd basic_subscriber`
 
