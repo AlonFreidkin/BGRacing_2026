@@ -52,7 +52,7 @@ Ubuntu 24.04
 
 5. open another terminal, and then do the command `cd basic_publisher`
 
-6. build the second image with docker `docker build -t basic_publisher`
+6. build the second image with docker `docker build -t basic_publisher .`
 
 7. create a network `docker network create ros2_net`
 
