@@ -11,27 +11,46 @@ class BasicSubscriber(Node):
         self.counter = 0
         self.x = []
         self.y = []
+        self.x_left = []
+        self.y_left = []
+        self.x_right = []
+        self.y_right = []
         self.sub_ = self.create_subscription(String, "points",self.msgCallback,10)
     def msgCallback(self, msg):
         arr = list(map(float,msg.data.split()))
         self.x.append(arr[0])
-        self.y.append(arr[1])
-        self.get_logger().info("%s %s" % (arr[0],arr[1]))
+        self.x_left.append(arr[1])
+        self.x_right.append(arr[2])
+        self.y.append(arr[3])
+        self.y_left.append(arr[4])
+        self.y_right.append(arr[5])
+        self.get_logger().info("%s %s %s %s" % (arr[0],arr[1],arr[2],arr[3]))
+        self.counter += 1
         if self.counter == 155:
             result_x = np.array(self.x)
             result_y = np.array(self.y)
-            np.concatenate((result_x,[self.x[0]]))
-            np.concatenate((result_y,[self.y[0]]))
-            cubic_spliner = interp1d(result_x,result_y,kind='cubic')
-            plt.figure(figsize=(10,6))
-            plt.plot(result_x,result_y)
+            x_total = np.array([])
+            y_total = np.array([])
+            for i in range(len(result_x)-1):
+                if result_x[i+1]< result_x[i]:
+                    cubic_spliner = interp1d([result_x[i+1],result_x[i]],[result_y[i+1],result_y[i]])
+                    samples = np.linspace(result_x[i+1],result_x[i],3)
+                    x_total = np.concatenate((x_total,samples))
+                    y_total = np.concatenate((y_total,cubic_spliner(samples)))
+                else:
+                    cubic_spliner = interp1d([result_x[i],result_x[i+1]],[result_y[i],result_y[i+1]])
+                    samples = np.linspace(result_x[i],result_x[i+1],31)
+                    x_total = np.concatenate((x_total,samples))
+                    y_total = np.concatenate((y_total,cubic_spliner(samples)))
+            plt.plot(self.x_left,self.y_left,color='red')
+            plt.plot(np.concatenate((x_total,np.array([0]))),np.concatenate((y_total,np.array([0]))),color="blue")
+            plt.plot(self.x_right,self.y_right,color="green")
             plt.xlabel("X")
             plt.ylabel('y')
             plt.grid(True)
             plt.savefig("/ros2_ws/output/result.png", dpi = 300,bbox_inches='tight')
-            self.destroy_node()
+            plt.close('all')
             rclpy.shutdown()
-        self.counter += 1
             
 
 
