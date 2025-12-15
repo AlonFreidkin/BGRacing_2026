@@ -27,6 +27,17 @@ class BasicPublisher(Node):
         else:
             self.destroy_node()
             rclpy.shutdown()
+def mid(x,y):
+    for i in range(1,len(x)-1):
+        x0 = x[i-1]
+        x1 = x[i+1]
+        y0 = y[i-1]
+        y1 = y[i+1]
+        x_mid = (x0+x1)/2
+        y_mid = (y0+y1)/2
+        x[i] = (x[i]+x_mid)/2
+        y[i] = (y[i]+y_mid)/2
+    return x, y
 def main():
     rclpy.init()
    
@@ -35,8 +46,10 @@ def main():
     x_left = np.array(df['x'][1:157])
     print(len(x_left))
     y_left = np.array(df['y'][1:157])
+    x_left, y_left = mid(x_left,y_left)
     x_right = np.array(df['x'][158:])
     y_right = np.array(df['y'][158:])
+    x_right, y_right = mid(x_right,y_right)
     x = 0.5*(x_left+x_right)
     y = 0.5*(y_left+y_right)
     basic_publisher = BasicPublisher(x,y,x_left,y_left,x_right,y_right)

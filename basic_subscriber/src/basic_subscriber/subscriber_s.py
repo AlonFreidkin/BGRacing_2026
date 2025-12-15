@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
+import math
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -34,14 +35,25 @@ class BasicSubscriber(Node):
             for i in range(len(result_x)-1):
                 if result_x[i+1]< result_x[i]:
                     cubic_spliner = interp1d([result_x[i+1],result_x[i]],[result_y[i+1],result_y[i]])
-                    samples = np.linspace(result_x[i+1],result_x[i],101)
-                    x_total = np.concatenate((x_total,samples[::-1]))
-                    y_total = np.concatenate((y_total,cubic_spliner(samples)[::-1]))
-                else:
-                    cubic_spliner = interp1d([result_x[i],result_x[i+1]],[result_y[i],result_y[i+1]])
-                    samples = np.linspace(result_x[i],result_x[i+1],101)
+                    samples = np.linspace(result_x[i+1],result_x[i],101)[::-1][0:100]
                     x_total = np.concatenate((x_total,samples))
                     y_total = np.concatenate((y_total,cubic_spliner(samples)))
+                else:
+                    cubic_spliner = interp1d([result_x[i],result_x[i+1]],[result_y[i],result_y[i+1]])
+                    samples = np.linspace(result_x[i],result_x[i+1],101)[0:100]
+                    x_total = np.concatenate((x_total,samples))
+                    y_total = np.concatenate((y_total,cubic_spliner(samples)))
+                if i>0:
+                    x0 = x_total[100*(i-1)+99]
+                    y0 = y_total[100*(i-1)+99]
+                    x1 = x_total[100*i+1]
+                    y1 = y_total[100*i+1]
+                    x_mid = (x0+x1)/2
+                    y_mid = (y0+y1)/2
+                    x_current = x_total[100*i] 
+                    y_current = y_total[100*i]
+                    x_total[100*i] = (x_mid+x_current)/2
+                    y_total[100*i] = (y_mid+y_current)/2
             plt.plot(self.x_left+[self.x_left[0]],self.y_left+[self.y_left[0]],color='red')
             plt.plot(np.concatenate((x_total,np.array([x_total[0]]))),np.concatenate((y_total,np.array([y_total[0]]))),color="blue")
             plt.plot(self.x_right+[self.x_right[0]],self.y_right+[self.y_right[0]],color="green")
